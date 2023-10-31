@@ -4,10 +4,10 @@ import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-# Streamlit App
+# Streamlit App Main title
 st.title('Extensive EDA Web App')
 
-# Upload CSV file
+# Code that enables fo the user to upload their CSV file
 uploaded_file = st.file_uploader("Upload a CSV file", type=["csv"])
 
 if uploaded_file is not None:
@@ -72,7 +72,3 @@ if uploaded_file is not None:
         sns.countplot(data=df, x=col)
         plt.xticks(rotation=45)
         st.pyplot()
-
-    st.subheader("Interactive Visualizations")
-
-    # You can add more custom visualizations and analytics here.
